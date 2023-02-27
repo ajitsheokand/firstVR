@@ -1,0 +1,6 @@
+AddType application/wasm .wasm
+AddEncoding br .wasm .data .js .mem
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/wasm
+</IfModule>
